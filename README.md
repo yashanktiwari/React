@@ -1,0 +1,14 @@
+# Food Delivery App Design:
+- Header
+    - Logo
+    - Nav items
+- Body
+    - Search
+    - Restaurant Container
+        - Restaurant Card
+            - Name of restaurant, Star Rating, Cuisine
+- Footer
+    - Copyright
+    - Links
+    - Address
+    - Contact
