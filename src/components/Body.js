@@ -2,14 +2,12 @@ import RestaurantCard from "./RestaurantCard";
 import { resList } from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 
 const Body = () => {
-
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
-
     const [searchList, setSearchList] = useState([]);
-
     const [searchText, setSearchText] = useState("");
 
 
@@ -23,6 +21,8 @@ const Body = () => {
         const json = await data.json();
 
         // console.log(json);
+        // console.log(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        // console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
         // Optional Chaining -> ?
         setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -65,7 +65,9 @@ const Body = () => {
             <div className="res-container">
                 {
                     searchList?.map((restaurant) => (
-                            <RestaurantCard resData={restaurant} key={restaurant.info.id}/>
+                            <Link to={"/restaurants/" + restaurant?.info?.id} key={restaurant.info.id}>
+                                <RestaurantCard resData={restaurant}/>
+                            </Link>
                         )
                     )
                 }

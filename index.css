@@ -36,7 +36,9 @@
 }
 
 .res-container {
+    margin-left: 80px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .filter {
@@ -87,4 +89,14 @@
     padding: 0 10px;
     margin-right: 10px;
     cursor: pointer;
+}
+
+.menu {
+    margin-left: 50px;
+}
+
+.res-image {
+    height: 400px;
+    position: absolute;
+    left: 1000px;
 }
