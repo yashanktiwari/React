@@ -23,7 +23,7 @@ const Body = () => {
 
     // console.log(json);
     // console.log(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    // console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
     // Optional Chaining -> ?
     setListOfRestaurants(
